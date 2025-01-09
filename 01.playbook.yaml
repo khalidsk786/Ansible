@@ -1,5 +1,5 @@
-- name: KHALID
-  hosts: web
-  tasks:   #task = module =cllection
-  -name: ping server
+- name : PING
+  hosts : web
+  tasks :   #task = module =cllection
+  -name : ping server
   ansible.builtin.ping:
