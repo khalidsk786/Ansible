@@ -1,4 +1,4 @@
-- name: KHALID
+- name: PING
   hosts: web 
   Tasks: #task=module=collection
    - name: ping the server
