@@ -1,12 +1,6 @@
--name : install and run ngnix
-hosts : web
-become : yes  # -b root access
-tasks :
--name : install ngnix
-ansible.builtin.package:
-name : ngnix
-state : present
--name : start ngnix
-ansible.builtin.service:
-name : ngnix
-state : started
+-name: hellp\o payabck
+ hosts: web
+ tasks:
+- name: print hello server
+  absible.builtin.debug;
+   msg: Hello world
