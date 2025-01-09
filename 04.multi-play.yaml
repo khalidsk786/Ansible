@@ -3,7 +3,7 @@
   connection: local #run its own node no need credentials
   tasks:
   - name: play1 and task1
-    ansible.builton.debug:
+    ansible.builtin.debug:
      msg: "Hello  from play1 and task1"
 
 - name: play2
