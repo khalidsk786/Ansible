@@ -1,0 +1,15 @@
+<students>
+
+<students>
+   <name>khalid</name>
+   <email>khalid@gmail.com</email>
+
+ <address> 
+  <paddress>
+    <house no> 1234</house no>
+    
+  </paddress>
+
+ </address>
+ </students>
+</students>

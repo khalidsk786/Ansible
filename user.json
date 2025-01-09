@@ -1,0 +1,24 @@
+{
+
+   "name" : "Khalid",
+   "email" : "abc@gmail.com",
+   "address": 
+           [
+            
+              {
+
+               "type" : "perm",
+               "door" : "1234",
+               "street" : "jr peta"
+
+              },
+
+              {
+
+                "type" : "temp",
+                "door" : "5678",
+                "street" : "tenkayatopu"
+ 
+               }
+            ]
+}

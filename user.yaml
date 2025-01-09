@@ -1,0 +1,11 @@
+- name : khalid
+  email : khalid@123
+  address : # list of address
+   - type : perm
+     door no : 12345
+     street : jr peta
+     city   : atmakur
+   - type : present
+     door no : 12345
+     street : jr peta
+     city   : atmakur
