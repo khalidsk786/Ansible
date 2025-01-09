@@ -1,6 +1,6 @@
--name: hellp\o payabck
+-name: hello playbook
  hosts: web
  tasks:
-- name: print hello server
-  absible.builtin.debug;
+ - name: print hello server
+   ansible.builtin.debug:
    msg: Hello world
