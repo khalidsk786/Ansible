@@ -1,4 +1,4 @@
-- name: hello playbook
+- name: hello khalid
   hosts: web
   tasks:
   - name: print hello server
