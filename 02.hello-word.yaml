@@ -5,11 +5,10 @@
 #     ansible.builtin.debug:
 #       msg: Hello world
 - name: hello khalid
-  hosts:web
+  hosts: web
   tasks:
   - name:  Hello sever
     Ansible.builtin.debug:
      msg : helllo khalid how are you
 
 
-     
