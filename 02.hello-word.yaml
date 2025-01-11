@@ -1,4 +1,4 @@
-# - name: hello khalid
+# - name: hello Kalid
 #   hosts: web
 #   tasks:
 #   - name: print hello server
