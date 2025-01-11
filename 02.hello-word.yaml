@@ -5,8 +5,8 @@
 #     ansible.builtin.debug:
 #       msg: Hello world
 - name: hello khalid
- hosts: web
- tasks:
+  hosts:web
+  tasks:
  - name: print hello server
-   ansible.builtin.debug
-    msg: hello khalid how are you
+   ansible.builtin.debug:
+   msg: hello khalid how are you
