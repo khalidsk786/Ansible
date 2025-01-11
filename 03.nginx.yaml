@@ -16,12 +16,12 @@
   become: yes # root access
   tasks:
   - name: install nginx
-    ansible.builtn.package:
+    ansible.builtin.package:
     - name: nginx
       State: present
 
   - name: start nginx
-    ansible.builtn.service:
+    ansible.builtin.service:
     - name: nginx
       State: started
 
