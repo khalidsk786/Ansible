@@ -21,7 +21,7 @@
       State: present
 
   - name: start nginx
-    ansible.builtn.service;
+    ansible.builtn.service:
     - name: nginx
       State: started
 
