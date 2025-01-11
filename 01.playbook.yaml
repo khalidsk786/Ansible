@@ -1,11 +1,18 @@
-- name: PING
-  hosts: web 
-  tasks: #task=module=collection
-  - name: ping the server
-    ansible.builtin.ping:
+# - name: PING
+#   hosts: web 
+#   tasks: #task=module=collection
+#   - name: ping the server
+#     ansible.builtin.ping:
 
 # - name: PING
 #   hosts: web
 #   tasks: # task=module=collection
 #   - name: ping the server
 #     ansible.builtin.ping:
+
+- name: KHALID
+  hosts: web
+  tasks:
+  - name: ping the server
+  ansible.builtin.ping:
+
