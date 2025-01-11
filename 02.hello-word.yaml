@@ -7,8 +7,8 @@
 - name: hello khalid
   hosts: web
   tasks:
-  - name:  Hello sever
+  - name:  Hello server
     Ansible.builtin.debug:
-     msg : helllo khalid how are you
+     msg: Hello server khalid
 
 
