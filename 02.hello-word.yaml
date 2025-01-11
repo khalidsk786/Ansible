@@ -1,6 +1,12 @@
+# - name: hello khalid
+#   hosts: web
+#   tasks:
+#   - name: print hello server
+#     ansible.builtin.debug:
+#       msg: Hello world
 - name: hello khalid
-  hosts: web
-  tasks:
-  - name: print hello server
-    ansible.builtin.debug:
-      msg: Hello world
+ hosts: web
+ tasks:
+ - name: print hello server
+   ansible.builtin.debug
+    msg: hello khalid how are you
