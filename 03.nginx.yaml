@@ -13,16 +13,15 @@
 
 - name: install and run nginx
   hosts: web
-  become: yes # root access
+  become: yes
   tasks:
   - name: install nginx
     ansible.builtin.package:
      name: nginx
      state: present
-  - name: start ngnix
+  - name: start nginx
     ansible.builtin.service:
-     name:ngnix
-     state:started
-
+     name: nginx
+     state: started
 
   
