@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   tasks:
-  - name : print the variables
+  - name: print the variables
     ansible.builtin.debug:
      msg:"Course is Devopsdaws82s,duration is 120 hours, trainer is Shivakumar"
 
