@@ -1,0 +1,6 @@
+- name: variable
+  hosts: local
+  connection: local
+  - name : print the variables
+    ansible.builtin.debug:
+     msg :"Course is Devopsdaws82s,duration is 120 hours, trainer is Shivakumar"
