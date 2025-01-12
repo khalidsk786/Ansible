@@ -27,5 +27,10 @@
     TRAINER: shivakumar
   tasks:
   - name: print the variables
+    vars:
+    COURSE: Ansible
     ansible.builtin.debug:
       msg: "course is {{COURSE}},duration is {{DURATION}},trainer is {{TRAINER}}"
+  - name: print the variables1
+    ansible.builtin:debug:
+      msg:  "course is {{COURSE}},duration is {{DURATION}},trainer is {{TRAINER}}" "course is {{COURSE}},duration is {{DURATION}},trainer is {{TRAINER}}"
