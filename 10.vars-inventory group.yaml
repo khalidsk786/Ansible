@@ -1,0 +1,8 @@
+- name: variables from prompt
+  hosts: web
+  # connection: local
+  # vars_prompt:
+  tasks:
+  - name: print the variables from prompt
+    ansible.builtin.debug:
+     msg: "course is {{COURSE}},Duration is {{DURATION}},trainer is {{TRAINER}},student is {{STUDENT}}"
