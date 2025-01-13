@@ -9,6 +9,6 @@
   - name: TRAINER
     prompt: what your trainer name.?
   tasks:
-  - name: print the variables from prompt
-    ansible.builtin.debug:
-     msg: "course is {{COURSE}},Duration is{{DURATION}},trainer is {{TRAINER}}"
+- name: print the variables from prompt
+  ansible.builtin.debug:
+    msg: "course is {{COURSE}},Duration is{{DURATION}},trainer is {{TRAINER}}"
