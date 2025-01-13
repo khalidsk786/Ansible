@@ -6,7 +6,7 @@
     prompt: please enter your course name.?
     private: false
   - name: DURATION
-    prompt: what is your durationperiod.?
+    prompt: what is your duration period.?
     private: false
   - name: TRAINER
     prompt: what your trainer name.?
