@@ -17,5 +17,5 @@
   tasks:
   - name: "Devops with Aws ansible"
     ansible.builtin.debug:
-      msg: "Hello course name is {{COURSE_NAME}}", Duration is : {{DURATION}}, topics are {{topics}},live is {{live}}, tools are {{tools}}
+      msg: "Hello course name is {{COURSE_NAME}}", Duration is : {{DURATIion}}, topics are {{topics}},live is {{live}}, tools are {{tools}}"
   
