@@ -1,14 +1,14 @@
 - name: variable
   hosts: local
   connection: local
-   vars:
-     GREET: "PLAY"
-   vars_files:
+  vars:
+   GREET: "PLAY"
+  vars_files:
    - course.yaml
-   vars_prompt:
+  vars_prompt:
    - name: GREET
-    prompt: please enter the variable
-    private: false
+     prompt: please enter the variable
+     private: false
   tasks:
   - name: print the pref variable
     vars:
@@ -24,3 +24,5 @@
 #5. Play
 #6. Inventory
 #7. Roles
+
+
