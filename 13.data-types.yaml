@@ -1,41 +1,41 @@
-# - name: Datatypes variables for Devops ansible
-#   hosts: local
-#   connection: local
-#   vars:
-#     COURSE_NAME: "Devops with Aws"
-#     DURATION: 120HRS
-#     topics: #list
-#     - Linux
-#     - Ansible
-#     - Shell
-#     - Aws
-#     live: True #Boolean
-#     tools:
-#      cloud: aws
-#      ci: jenkins
-#      containerization: docker
-#   tasks:
-#   - name: "Devops with Aws ansible"
-#     ansible.builtin.debug:
-#       msg: "Hello course name is {{COURSE_NAME}}", Duration is : {{DURATIion}}, topics are {{topics}},live is {{live}}, tools are {{tools}}"
-  
-- name: DevOps course information
+- name: Datatypes variables for Devops ansible
   hosts: local
   connection: local
   vars:
-    course_name: "DevOps with AWS" # string
-    duration: 120 #number
-    topics: # list, [] this means list
-    - linux
-    - shell
-    - ansible
-    - AWS
-    live: true # boolean
-    tools: #map, {} this means map
-      ci: jenkins
-      cloud: aws
-      containerization: docker
+    COURSE_NAME: "Devops with Aws"
+    DURATION: 120HRS
+    topics: #list
+    - Linux
+    - Ansible
+    - Shell
+    - Aws
+    live: True #Boolean
+    tools:
+     cloud: aws
+     ci: jenkins
+     containerization: docker
   tasks:
-  - name: print course information
+  - name: "Devops with Aws ansible"
     ansible.builtin.debug:
-      msg: "Hello I am learning {{ course_name }}, duration: {{ duration }}, topics are: {{ topics }}, is it live?: {{ live }}, tools covered are: {{ tools }}"
+      msg: "Hello course name is {{COURSE_NAME}}", Duration is : {{DURATIION}}, topics are {{topics}},live is {{live}}, tools are {{tools}}"
+  
+# - name: DevOps course information
+#   hosts: local
+#   connection: local
+#   vars:
+#     course_name: "DevOps with AWS" # string
+#     duration: 120 #number
+#     topics: # list, [] this means list
+#     - linux
+#     - shell
+#     - ansible
+#     - AWS
+#     live: true # boolean
+#     tools: #map, {} this means map
+#       ci: jenkins
+#       cloud: aws
+#       containerization: docker
+#   tasks:
+#   - name: print course information
+#     ansible.builtin.debug:
+#       msg: "Hello I am learning {{ course_name }}, duration: {{ duration }}, topics are: {{ topics }}, is it live?: {{ live }}, tools covered are: {{ tools }}"
