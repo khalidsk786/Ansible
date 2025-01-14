@@ -13,7 +13,7 @@
     tools:
      cloud: aws
      ci: jenkins
-     containerization: docker
+    #  containerization: docker
 tasks:
 - name: "Devops with Aws ansible"
   ansible.builtin.debug:
