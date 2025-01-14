@@ -14,7 +14,7 @@
     vars:
       GREET: "TASKS"
     ansible.builtin.debug:
-      msg: "Course is {{ GREET }}"
+      msg: "Hello is {{ GREET }}"
 
       
 #1. Command line or args
