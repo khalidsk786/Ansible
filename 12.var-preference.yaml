@@ -13,7 +13,7 @@
   - name: print the pref variable
     vars:
       GREET: "TASKS"
-      ansible.builtin.debug:
+    ansible.builtin.debug:
       msg: "Course is {{ GREET }}"
 
       
