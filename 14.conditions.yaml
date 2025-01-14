@@ -1,0 +1,14 @@
+- name: conditions if given number grater then 10 or not
+  hosts: local
+  connection: local
+  vars:
+   My_number: 20
+  tasks:
+  - name : print if given number greater than 10
+    ansible.builtin.debug:
+     msg : "given number {{My_number}} is greter then 10"
+    when: My_number>10
+  - name : print if given number leass than or equal to 10
+    ansible.builtin.debug:
+     msg : "given number {{My_number}} is greter then 10"
+    when: My_number<=10

@@ -2,15 +2,15 @@
   hosts: local
   connection: local
   vars:
-    COURSE_NAME: "Devops with Aws"
-    DURATION: 120HRS
+    COURSE_NAME: "Devops with Aws" #string
+    DURATION: 120HRS #num
     topics: #list
     - Linux
     - Ansible
     - Shell
     - Aws
     live: True #Boolean
-    tools:
+    tools: #map
      cloud: aws
      ci: jenkins
      containerization: docker
