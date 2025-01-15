@@ -4,7 +4,7 @@
    taks:
    - name: print loops
      ansible.builtin.debug:
-      msg: {{ item }}
+      msg: "{{ item }}""
     loop:
     - Shaik
     - Khalid
