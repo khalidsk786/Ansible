@@ -4,7 +4,6 @@
   tasks:
   - name: execute ls command
     ansible.builtin.command: ls -ltr 
-    # ansible.builtin.shell: ls -ltr
   - name: execute command in command module
     name.builtin.command: ls -ltr
     Register: command_result
