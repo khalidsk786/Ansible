@@ -6,7 +6,7 @@
     ansible.builtin.command: ls -ltr 
   - name: execute command in command module
     name.builtin.command: ls -ltr
-    Register: command_result
+    register: command_result
   - name: print the result
     name.bulitin.debug:
      msg: "{{command_result}}"
