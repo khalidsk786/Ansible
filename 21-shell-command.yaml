@@ -10,7 +10,7 @@
     Register: command_result
   - name: print the result
     name.bulitin.debug:
-     msg: "{{command_ result}}"
+     msg: "{{command_result}}"
 
 
 # - name: Shell vs command
@@ -25,4 +25,4 @@
 #     Register: command_result
 #   - name: print the result
 #     name.bulitin.debug:
-#      msg: "{{ command_ result}}"
+#      msg: "{{ command_result}}"
