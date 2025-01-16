@@ -10,7 +10,7 @@
      register: command_result
   - name: print the result
     ansible.bulitin.debug:
-     msg: "{{command_result}}"
+     msg: "{{ command_result }}"
 
 
 # - name: Shell vs command
