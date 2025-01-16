@@ -12,7 +12,7 @@
 
   - name: print the result
     name.bulitin.debug:
-     msg: "{{ command_ result }}"
+     msg: "{{command_ result}}"
 
 
 # - name: Shell vs command
