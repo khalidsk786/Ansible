@@ -27,6 +27,13 @@
       instance_type: "{{ instance_type }}"
       image_id: "{{ ami_id }}"
     loop: "{{ instances }}"
+    register: ec2_info
+  # print ec2 result  
+  - name: print ec2 info
+    ansible.builtin.debug:
+      msg: "{{ ec2_info }}"
+  
+  
 
     # ec2:
     #   key_name: ansible
@@ -42,3 +49,13 @@
     #     Name: "{{ item }}"
     # with_items: "{{ instances }}"
     # register: ec2
+
+    # - name: create route53 record
+    #   amazon.aws.route53:
+    #     state: present
+    #     zone: "ansible.com."
+    #     record: "{{ item }}"
+    #     type: A
+    #     ttl: 3600
+    #     value: "{{ hostvars[item].ec2_instance.public_ip }}"
+    #   loop: "{{ instances }}"
