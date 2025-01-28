@@ -51,6 +51,24 @@
       overwrite: true # overwrite the record if it already exists
     loop: "{{ ec2_info.results }}" # loop through the ec2 instances
 
+  # create public ip route53 record
+  - name: create public ip route53 record
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zones }}"
+      record: "{{ zones }}"
+      type: A
+      ttl: 1
+      value: "{{ item.instaces[0].public_ip_address }}"
+      wait: true
+      overwrite: true
+    loop: "{{ ec2_info.results }}" # loop through the ec2 instances
+    # - name: create ec2 instances
+    when: item.item == "frontend" # only create the record for the frontend instance
+    
+
+    
+  
       
 
 
