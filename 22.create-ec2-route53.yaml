@@ -1,0 +1,38 @@
+- name: create ec2 and route53
+  hosts: localhost
+  connection: local
+  tasks:
+  vars:
+    SubnetId: subnet-04f7f3ddfb1d25f99
+    Sg_id: sg-017be4d720c29e221
+    ami_id: ami-09c813fb71547fc4f
+    instance_type: t3.micro
+    instances:
+    - mysql
+    - backend
+    - frontend
+  tasks:
+  - name: create ec2 instances
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      key_name: ansible
+      subnet_id: "{{ subnet_id }}"
+      security_group: "{{ sg_id}}"
+      instance_type: "{{ instance_type }}"
+      image_id: "{{ ami_id }}"
+    loop: "{{ instances }}"
+
+    # ec2:
+    #   key_name: ansible
+    #   instance_type: "{{ instance_type }}"
+    #   image: "{{ ami_id }}"
+    #   wait: yes
+    #   region: ap-south-1
+    #   group: "{{ Sg_id }}"
+    #   count: 1
+    #   vpc_subnet_id: "{{ SubnetId }}"
+    #   assign_public_ip: yes
+    #   instance_tags:
+    #     Name: "{{ item }}"
+    # with_items: "{{ instances }}"
+    # register: ec2
