@@ -15,8 +15,8 @@
     amazon.aws.ec2_instance:
       name: "{{ item }}"
       key_name: ansible
-      subnet_id: "{{ subnet_id }}"
-      security_group: "{{ sg_id}}"
+      subnet_id: "{{ Subnet_Id }}"
+      security_group: "{{ Sg_id }}"
       instance_type: "{{ instance_type }}"
       image_id: "{{ ami_id }}"
     loop: "{{ instances }}"
