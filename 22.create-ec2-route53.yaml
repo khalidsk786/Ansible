@@ -37,11 +37,26 @@
     ansible.builtin.debug:
       msg: "{{ item.item }}: {{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results }}"
+  # create private ip route53 record
+  - name: create private ip route53 record
+    amazon.aws.route53:
+      zone: "ansible.com."
+      record: "{{ item.item }}"
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address }}"
+      wait: true
+      overwrite: true
+    loop: "{{ ec2_info.results }}"
 
-    # - nname : print private ip
-    #   ansible.builtin.debug:
-    #     msg: "{{ item.instances[0].public_ip_address }}"
-    #   loop: "{{ ec2_info.results }}"
+      
+
+
+
+
+
+
+
   
 
     # ec2:
