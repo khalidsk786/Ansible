@@ -3,7 +3,7 @@
   connection: local
   tasks:
   vars:
-    SubnetId: subnet-04f7f3ddfb1d25f99
+    Subnet_Id: subnet-04f7f3ddfb1d25f99
     Sg_id: sg-017be4d720c29e221
     ami_id: ami-09c813fb71547fc4f
     instance_type: t3.micro
