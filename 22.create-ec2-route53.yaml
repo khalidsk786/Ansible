@@ -6,6 +6,7 @@
     Sg_id: sg-017be4d720c29e221
     ami_id: ami-09c813fb71547fc4f
     instance_type: t3.micro
+    zones: khalidaws82.tech
     instances:
     - mysql
     - backend
@@ -32,22 +33,23 @@
   - name: print ec2 info
     ansible.builtin.debug:
       msg: "{{ ec2_info }}"
-  # print private ip
-  - name: print ec2 private ip
+  # print private ip address
+  - name: print ec2 private ip address
     ansible.builtin.debug:
-      msg: "{{ item.item }}: {{ item.instances[0].private_ip_address }}"
+      msg: "{{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results }}"
   # create private ip route53 record
-  - name: create private ip route53 record
-    amazon.aws.route53:
-      zone: "ansible.com."
-      record: "{{ item.item }}"
-      type: A
-      ttl: 1
-      value: "{{ item.instances[0].private_ip_address }}"
-      wait: true
-      overwrite: true
-    loop: "{{ ec2_info.results }}"
+  - name: create private ip route53 record 
+    amazon.aws.route53: # route53 module
+      state: present # create the record
+      zone: "{{ zones }}" # khalidaws82.tech
+      record: "{{ item.item }}.{{ zones }}" # mysql.khalidaws82.tech
+      type: A # A record
+      ttl: 1  
+      value: "{{ item.instances[0].private_ip_address }}" # private ip address
+      wait: true # wait for the record to be created
+      overwrite: true # overwrite the record if it already exists
+    loop: "{{ ec2_info.results }}" # loop through the ec2 instances
 
       
 
