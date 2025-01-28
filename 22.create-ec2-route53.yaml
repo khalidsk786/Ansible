@@ -32,7 +32,16 @@
   - name: print ec2 info
     ansible.builtin.debug:
       msg: "{{ ec2_info }}"
-  
+  # print private ip
+  - name: print ec2 private ip
+    ansible.builtin.debug:
+      msg: "{{ item.item }}: {{ item.instances[0].private_ip_address }}"
+    loop: "{{ ec2_info.results }}"
+
+    # - nname : print private ip
+    #   ansible.builtin.debug:
+    #     msg: "{{ item.instances[0].public_ip_address }}"
+    #   loop: "{{ ec2_info.results }}"
   
 
     # ec2:
